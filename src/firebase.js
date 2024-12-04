@@ -2,17 +2,17 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
-
+1
 const firebaseConfig = {
-  apiKey: "AIzaSyBdmMzodHVI3ZdwuTDv6qgfhlzyJtoEIbQ",
-  authDomain: "npxfiredrill.firebaseapp.com",
-  projectId: "npxfiredrill",
-  storageBucket: "npxfiredrill.firebasestorage.app",
-  messagingSenderId: "961552359765",
-  appId: "1:961552359765:web:ffd92b7bc7349f0992cfdc",
-  measurementId: "G-JV1H8WQD4D"
-};
-
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID
+};// End of Selection
+  
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
